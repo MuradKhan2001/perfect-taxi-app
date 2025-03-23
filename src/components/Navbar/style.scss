@@ -1,0 +1,444 @@
+$Color1: #00C389;
+$Color2: #001020;
+
+.navbar-wrapper {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  .logo {
+    width: 120px;
+
+    img {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .nav-show {
+    display: none;
+  }
+
+  .nav-list {
+    width: 40%;
+    height: 100%;
+
+    .sloy-mobile {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .nav-item-hide {
+        display: none;
+      }
+
+      .nav-item {
+        position: relative;
+        cursor: pointer;
+        line-height: 18.2px;
+        font-weight: 600;
+        font-size: 20px;
+        color: white;
+        transition: .4s;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 90%;
+          height: 2px;
+          background: $Color1;
+          border-radius: 5px;
+          left: 4px;
+          bottom: -3px;
+          transition: .3s;
+          opacity: 0;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      .driver_btn {
+        display: none;
+      }
+
+      .nav-title-mobile {
+        display: none;
+      }
+
+      .logo-mobile {
+        display: none;
+      }
+
+      .bttns-mobile {
+        display: none;
+      }
+    }
+  }
+
+  .alert-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  .alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .alert-exit {
+    opacity: 1;
+  }
+
+  .alert-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .mobile-left-side {
+    display: flex;
+    .language-box {
+      margin-right: 18px;
+      padding: 6px;
+      background-color: $Color1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+
+      .language_menu {
+        padding-top: 4px;
+        padding-bottom: 2px;
+        position: absolute;
+        bottom: -75px;
+        left: 8px;
+        width: 80%;
+        background-color: $Color1;
+        border-radius: 5px;
+
+        .items {
+          text-align: center;
+          font-size: 14px;
+          border-radius: 4px;
+          transition: .3s;
+
+          &:hover {
+            background-color: #3b9b7d;
+          }
+        }
+      }
+
+      img {
+        width: 25px;
+      }
+
+      span {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+
+      .alert-enter {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      .alert-enter-active {
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+
+      .alert-exit {
+        opacity: 1;
+      }
+
+      .alert-exit-active {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 300ms, transform 300ms;
+      }
+
+
+    }
+
+    .driver_btn {
+      cursor: pointer;
+      padding: 10px 25px 10px 25px;
+      border: none;
+      background-color: $Color2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border-radius: 8px;
+
+      &:focus {
+        outline: none;
+      }
+
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    .logo {
+      width: 100px;
+
+      img {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .nav-list {
+      z-index: 120;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transition: .4s;
+      border-radius: 5px;
+      background-color: rgb(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: flex-end;
+
+      .sloy-mobile {
+        width: 80%;
+        height: max-content;
+        background-color: white;
+        display: block;
+        padding-left: 25px;
+        padding-bottom: 25px;
+
+        .nav-item-hide {
+          margin-top: 30px;
+          padding-right: 30px;
+          display: flex;
+          justify-content: flex-end;
+
+          img {
+            width: 25px;
+          }
+        }
+
+        .nav-item {
+          margin-top: 20px;
+          font-size: 20px;
+          color: $Color2;
+          line-height: 21px;
+        }
+
+        .nav-title-mobile {
+          display: block;
+          color: $Color1;
+          font-weight: 700;
+          font-size: 22px;
+          margin-top: 25px;
+        }
+
+        .driver_btn {
+          margin-top: 20px;
+          width: max-content;
+          cursor: pointer;
+          padding: 15px 25px 15px 25px;
+          border: none;
+          background-color: $Color1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          border-radius: 8px;
+
+          &:focus {
+            outline: none;
+          }
+
+          img {
+            margin-right: 15px;
+          }
+        }
+
+        .bttns-mobile {
+          margin-top: 20px;
+          display: block;
+
+          .app-btn {
+            margin-top: 10px;
+            width: 160px;
+            height: 50px;
+            padding-left: 15px;
+            background-color: $Color2;
+            color: white;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+
+            .left {
+
+            }
+
+            .right {
+              margin-left: 10px;
+
+              .top-text {
+                font-size: 12px;
+                line-height: 10px;
+              }
+
+              .bottom-text {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .alert-enter {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .alert-enter-active {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    .alert-exit {
+      opacity: 1;
+    }
+
+    .alert-exit-active {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 300ms, transform 300ms;
+    }
+
+    .hide {
+      left: -120%;
+    }
+
+    .nav-show {
+      display: flex;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .mobile-left-side {
+      .driver_btn {
+        display: none;
+        font-size: 14px;
+        padding: 5px 20px 5px 20px;
+      }
+
+      .language-box {
+        padding: 6px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+
+        .language_menu {
+          padding-top: 2px;
+          padding-bottom: 2px;
+          position: absolute;
+          bottom: -70px;
+          left: 8px;
+          width: 80%;
+          background-color: $Color1;
+          border-radius: 5px;
+
+          .items {
+            text-align: center;
+            font-size: 14px;
+            border-radius: 10px;
+            transition: .3s;
+
+            &:hover {
+              background-color: #3b9b7d;
+            }
+          }
+        }
+
+        img {
+          width: 25px;
+        }
+
+        span {
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+
+        .alert-enter {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+
+        .alert-enter-active {
+          opacity: 1;
+          transform: translateX(0);
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        .alert-exit {
+          opacity: 1;
+        }
+
+        .alert-exit-active {
+          opacity: 0;
+          transform: scale(0.9);
+          transition: opacity 300ms, transform 300ms;
+        }
+      }
+    }
+  }
+}

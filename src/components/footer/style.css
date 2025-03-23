@@ -1,0 +1,121 @@
+.footer-container {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  background-color: #001020;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white; }
+  .footer-container .section-logo {
+    padding-left: 50px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .footer-container .section-logo img {
+      width: 240px; }
+  .footer-container .section-contact {
+    width: 30%;
+    height: 100%; }
+    .footer-container .section-contact .title-footer {
+      color: #00C389;
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold; }
+    .footer-container .section-contact .item-footer {
+      font-size: 20px;
+      margin-top: 10px; }
+  .footer-container .section-menu {
+    width: 15%;
+    height: 100%; }
+    .footer-container .section-menu .title-footer {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00C389; }
+    .footer-container .section-menu .item-footer {
+      cursor: pointer;
+      font-size: 20px;
+      margin-top: 10px; }
+  .footer-container .section-social-medias {
+    width: 15%;
+    height: 100%; }
+    .footer-container .section-social-medias .title-footer {
+      color: #00C389;
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold; }
+    .footer-container .section-social-medias .icons-box {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 40px; }
+      .footer-container .section-social-medias .icons-box img {
+        margin-right: 10px;
+        width: 40px; }
+    .footer-container .section-social-medias .app-btn {
+      cursor: pointer;
+      margin-right: 20px;
+      margin-top: 20px;
+      width: 160px;
+      height: 50px;
+      padding-left: 15px;
+      background-color: white;
+      color: #001020;
+      display: flex;
+      align-items: center;
+      border-radius: 5px; }
+      .footer-container .section-social-medias .app-btn .left img {
+        width: 30px; }
+      .footer-container .section-social-medias .app-btn .right {
+        margin-left: 10px; }
+        .footer-container .section-social-medias .app-btn .right .top-text {
+          font-size: 12px;
+          line-height: 10px; }
+        .footer-container .section-social-medias .app-btn .right .bottom-text {
+          font-size: 14px;
+          font-weight: bold; }
+
+@media (max-width: 768px) {
+  .footer-container {
+    margin-top: 60px;
+    height: auto;
+    display: block; }
+    .footer-container .section-logo {
+      margin-top: 20px;
+      padding-left: 10px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+      .footer-container .section-logo img {
+        width: 60%; }
+    .footer-container .section-contact {
+      width: 100%; }
+      .footer-container .section-contact .title-footer {
+        margin-top: 40px;
+        font-size: 20px; }
+      .footer-container .section-contact .item-footer {
+        font-size: 18px; }
+    .footer-container .section-menu {
+      width: 100%; }
+      .footer-container .section-menu .title-footer {
+        margin-top: 30px;
+        font-size: 20px; }
+      .footer-container .section-menu .item-footer {
+        font-size: 18px; }
+    .footer-container .section-social-medias {
+      width: 100%; }
+      .footer-container .section-social-medias .title-footer {
+        font-size: 20px; }
+      .footer-container .section-social-medias .icons-box {
+        width: 100%; }
+        .footer-container .section-social-medias .icons-box img {
+          margin-right: 10px;
+          width: 35px; }
+      .footer-container .section-social-medias .btns {
+        margin-bottom: 40px;
+        display: flex; } }
+
+/*# sourceMappingURL=style.css.map */
